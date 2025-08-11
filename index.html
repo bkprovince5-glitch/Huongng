@@ -3188,7 +3188,7 @@
                                 features: [
                                     { title: 'Cấp MST nhanh', description: 'Hệ thống tự động cấp MST cho cá nhân kinh doanh nếu đủ điều kiện.' },
                                     { title: 'Phân loại rủi ro đơn giản', description: 'Quy tắc phân loại rủi ro được điều chỉnh phù hợp với cá nhân.' },
-                                    { title: 'Đăng ký nghĩa vụ cơ bản', description: 'Đăng ký các nghĩa vụ kê khai cơ bản như thuế khoán.' }
+                                    { title: 'Đăng ký nghĩa vụ cơ bản', description: 'Đăng ký các nghĩa vụ kê khai cơ bản như thuế TNCN, GTGT.' }
                                 ]
                             },
                             'individual-income': {
@@ -3238,10 +3238,10 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Trả kết quả xử lý Đăng ký thuế',
-                                description: 'Cá nhân kinh doanh nhận thông báo MST và hướng dẫn về thuế khoán hoặc các nghĩa vụ khác.',
+                                description: 'Cá nhân kinh doanh nhận thông báo MST và hướng dẫn về thuế TNCN, GTGT hoặc các nghĩa vụ khác.',
                                 features: [
                                     { title: 'Tài khoản eTax cá nhân', description: 'Tạo tài khoản eTax cho cá nhân kinh doanh.' },
-                                    { title: 'Thông báo MST và thuế khoán', description: 'Thông báo MST kèm thông tin về thuế khoán và các nghĩa vụ khác.' },
+                                    { title: 'Thông báo MST và nghĩa vụ thuế', description: 'Thông báo MST kèm thông tin về nghĩa vụ kê khai thuế TNCN, GTGT và các nghĩa vụ khác.' },
                                     { title: 'Phản hồi tự động', description: 'Hệ thống tự động phản hồi kết quả qua email/SMS.' }
                                 ]
                             },
@@ -3394,9 +3394,9 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Tiếp nhận hồ sơ Khai thuế, nộp thuế',
-                                description: 'Cá nhân kinh doanh thường áp dụng thuế khoán, quy trình tiếp nhận hồ sơ đơn giản.',
+                                description: 'Cá nhân kinh doanh thường áp dụng thuế TNCN, GTGT theo doanh thu, quy trình tiếp nhận hồ sơ đơn giản.',
                                 features: [
-                                    { title: 'Xác định nghĩa vụ khoán', description: 'Hệ thống xác định nghĩa vụ thuế khoán cho cá nhân kinh doanh.' },
+                                    { title: 'Xác định nghĩa vụ khoán', description: 'Hệ thống xác định nghĩa vụ thuế TNCN, GTGT cho cá nhân kinh doanh.' },
                                     { title: 'Đôn đốc nộp thuế', description: 'Gửi thông báo đôn đốc nộp thuế định kỳ.' },
                                     { title: 'Hỗ trợ khai thuế', description: 'Hỗ trợ kê khai các khoản thuế phát sinh khác.' }
                                 ]
@@ -3447,10 +3447,10 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Xử lý hồ sơ Khai thuế, nộp thuế',
-                                description: 'Quy trình xử lý hồ sơ cho cá nhân kinh doanh được tối ưu hóa cho thuế khoán.',
+                                description: 'Quy trình xử lý hồ sơ cho cá nhân kinh doanh được tối ưu hóa cho thuế TNCN, GTGT.',
                                 features: [
                                     { title: 'Kiểm tra HSKT đơn giản', description: 'Kiểm tra điều kiện tiếp nhận HSKT cho cá nhân kinh doanh.' },
-                                    { title: 'Ghi nhận nghĩa vụ', description: 'Ghi nhận nghĩa vụ thuế khoán và các khoản khác.' },
+                                    { title: 'Ghi nhận nghĩa vụ', description: 'Ghi nhận nghĩa vụ thuế TNCN, GTGT và các khoản khác.' },
                                     { title: 'Xác định vi phạm', description: 'Xác định hành vi vi phạm liên quan đến kê khai.' }
                                 ]
                             },
@@ -3499,10 +3499,10 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Trả kết quả xử lý Khai thuế, nộp thuế',
-                                description: 'Cá nhân kinh doanh nhận thông báo nghĩa vụ thuế và cập nhật tình hình nộp thuế khoán.',
+                                description: 'Cá nhân kinh doanh nhận thông báo nghĩa vụ thuế và cập nhật tình hình nộp thuế TNCN, GTGT.',
                                 features: [
                                     { title: 'Thông báo nghĩa vụ', description: 'Trả thông báo nghĩa vụ thuế cho cá nhân kinh doanh.' },
-                                    { title: 'Cập nhật nghĩa vụ', description: 'Cập nhật nghĩa vụ thuế khoán và các khoản khác.' },
+                                    { title: 'Cập nhật nghĩa vụ', description: 'Cập nhật nghĩa vụ thuế TNCN, GTGT và các khoản khác.' },
                                     { title: 'Hạch toán nộp tiền', description: 'Tiếp nhận và hạch toán chứng từ nộp tiền.' }
                                 ]
                             },
@@ -3596,7 +3596,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Báo cáo kết quả Khai thuế, nộp thuế',
-                                description: 'Báo cáo kết quả kê khai, nộp thuế cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Báo cáo kết quả kê khai, nộp thuế cho cá nhân kinh doanh tập trung vào thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Tổng hợp số liệu', description: 'Tổng hợp số liệu kê khai, nộp thuế của cá nhân kinh doanh.' },
                                     { title: 'Phân tích tuân thủ', description: 'Phân tích tỷ lệ tuân thủ theo ngành nghề và địa bàn.' },
@@ -4169,10 +4169,10 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Quản lý nghĩa vụ thuế',
-                                description: 'Quản lý nghĩa vụ thuế cho cá nhân kinh doanh bao gồm thuế khoán và các khoản khác.',
+                                description: 'Quản lý nghĩa vụ thuế cho cá nhân kinh doanh bao gồm thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Gửi TK giao dịch', description: 'Hệ thống tự động gửi tài khoản giao dịch điện tử cho cá nhân.' },
-                                    { title: 'Xác định nghĩa vụ', description: 'Xác định nghĩa vụ thuế khoán và các khoản khác.' },
+                                    { title: 'Xác định nghĩa vụ', description: 'Xác định nghĩa vụ thuế TNCN, GTGT và các khoản khác.' },
                                     { title: 'Cập nhật trạng thái', description: 'Cập nhật trạng thái nghĩa vụ thuế.' }
                                 ]
                             },
@@ -4220,7 +4220,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Phát hiện sai sót nghĩa vụ',
-                                description: 'Phát hiện sai sót nghĩa vụ cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Phát hiện sai sót nghĩa vụ cho cá nhân kinh doanh tập trung vào thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Tổng hợp DS NNT', description: 'Tổng hợp danh sách cá nhân kinh doanh có nghĩa vụ chưa đúng.' },
                                     { title: 'Đối chiếu dữ liệu', description: 'Đối chiếu tờ khai, nộp và hóa đơn.' },
@@ -4317,7 +4317,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Xử lý tra soát thông tin',
-                                description: 'Xử lý tra soát thông tin cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Xử lý tra soát thông tin cho cá nhân kinh doanh tập trung vào thuế TNCN,GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Đối chiếu dữ liệu', description: 'Tự động đối chiếu dữ liệu tờ khai và nộp.' },
                                     { title: 'Điều chỉnh nghĩa vụ', description: 'Hệ thống tự điều chỉnh nghĩa vụ nếu chấp nhận tra soát.' },
@@ -4364,7 +4364,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Xác nhận nghĩa vụ thuế',
-                                description: 'Xác nhận nghĩa vụ thuế cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Xác nhận nghĩa vụ thuế cho cá nhân kinh doanh tập trung vào thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Xác nhận tự động', description: 'Tự động xác nhận nghĩa vụ thuế khi không có sai lệch.' },
                                     { title: 'Xác nhận thủ công', description: 'Cán bộ thuế xác nhận thủ công khi có điều chỉnh.' },
@@ -4411,7 +4411,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Xử lý nghĩa vụ nộp thừa/nợ thuế',
-                                description: 'Xử lý nghĩa vụ nộp thừa/nợ thuế cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Xử lý nghĩa vụ nộp thừa/nợ thuế cho cá nhân kinh doanh tập trung vào thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Đề xuất tự động', description: 'Tự động đề xuất xử lý nợ thừa/nợ thiếu.' },
                                     { title: 'Xử lý phức tạp', description: 'Cán bộ thuế xử lý các trường hợp phức tạp.' },
@@ -4514,7 +4514,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Quản lý nợ thuế',
-                                description: 'Quản lý nợ thuế cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Quản lý nợ thuế cho cá nhân kinh doanh tập trung vào thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Phân loại nợ tự động', description: 'Tự động tạo danh sách cá nhân kinh doanh chưa nộp đúng hạn và phân loại nợ.' },
                                     { title: 'Cảnh báo chậm nộp', description: 'Thông báo và tính tiền chậm nộp tự động.' },
@@ -4561,7 +4561,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Phân loại rủi ro nợ',
-                                description: 'Phân loại rủi ro nợ cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Phân loại rủi ro nợ cho cá nhân kinh doanh tập trung vào thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Đánh giá khả năng thu hồi', description: 'Đánh giá khả năng thu hồi nợ và rủi ro thất thu.' },
                                     { title: 'Xác nhận rủi ro', description: 'Cán bộ thuế xác nhận phân loại rủi ro.' },
@@ -4608,7 +4608,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Đề xuất cưỡng chế',
-                                description: 'Đề xuất cưỡng chế cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Đề xuất cưỡng chế cho cá nhân kinh doanh tập trung vào thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Gợi ý cưỡng chế', description: 'Tự động gợi ý hình thức cưỡng chế phù hợp.' },
                                     { title: 'Gửi thông báo', description: 'Gửi thông báo cưỡng chế qua TK giao dịch điện tử/email/SMS.' },
@@ -4656,7 +4656,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Áp dụng các biện pháp cưỡng chế',
-                                description: 'Áp dụng các biện pháp cưỡng chế cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Áp dụng các biện pháp cưỡng chế cho cá nhân kinh doanh tập trung vào thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Gửi thông báo', description: 'Hệ thống gửi thông báo cưỡng chế.' },
                                     { title: 'Áp dụng biện pháp', description: 'Cán bộ thuế áp dụng các biện pháp cưỡng chế.' },
@@ -4703,7 +4703,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Báo cáo, giám sát hệ thống',
-                                description: 'Báo cáo, giám sát hệ thống cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Báo cáo, giám sát hệ thống cho cá nhân kinh doanh tập trung vào thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Tổng hợp báo cáo', description: 'Tự động tổng hợp báo cáo nợ thuế.' },
                                     { title: 'Giám sát hiệu quả', description: 'Giám sát và đánh giá hiệu quả thu hồi nợ.' },
@@ -4766,7 +4766,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Tiếp nhận thông báo ngừng hoạt động',
-                                description: 'Tiếp nhận thông báo ngừng hoạt động cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Tiếp nhận thông báo ngừng hoạt động cho cá nhân kinh doanh tập trung vào nghĩa vụ thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Xác thực định danh', description: 'Xác thực định danh điện tử của cá nhân.' },
                                     { title: 'Kiểm tra điều kiện', description: 'Kiểm tra tình trạng nợ thuế và hồ sơ chưa hoàn thành.' },
@@ -4816,7 +4816,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Xử lý hồ sơ ngừng hoạt động',
-                                description: 'Xử lý hồ sơ ngừng hoạt động cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Xử lý hồ sơ ngừng hoạt động cho cá nhân kinh doanh tập trung vào thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Kiểm tra điều kiện', description: 'Kiểm tra nghĩa vụ thuế đã hoàn thành.' },
                                     { title: 'Xác nhận không nợ', description: 'Tự động kiểm tra và xác nhận không còn nợ thuế.' },
@@ -4862,7 +4862,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Trả kết quả xử lý ngừng hoạt động',
-                                description: 'Trả kết quả xử lý ngừng hoạt động cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Trả kết quả xử lý ngừng hoạt động cho cá nhân kinh doanh.',
                                 features: [
                                     { title: 'Thông báo xác nhận', description: 'Thông báo xác nhận hoàn thành nghĩa vụ thuế.' },
                                     { title: 'Thông báo ngừng hoạt động', description: 'Thông báo chính thức ngừng hoạt động.' },
@@ -4960,7 +4960,7 @@
                             },
                             'individual-business': {
                                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh khi Báo cáo kết quả ngừng hoạt động',
-                                description: 'Báo cáo kết quả ngừng hoạt động cho cá nhân kinh doanh tập trung vào thuế khoán và các khoản khác.',
+                                description: 'Báo cáo kết quả ngừng hoạt động cho cá nhân kinh doanh tập trung vào nghĩa vụ thuế TNCN, GTGT và các khoản khác.',
                                 features: [
                                     { title: 'Tổng hợp số liệu', description: 'Tổng hợp số liệu cá nhân kinh doanh ngừng hoạt động.' },
                                     { title: 'Phân tích nguyên nhân', description: 'Phân tích nguyên nhân ngừng hoạt động.' },

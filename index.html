@@ -3095,19 +3095,44 @@
                                 'individual-income': '1.2 Hỗ trợ xác định nguồn thu nhập (tiền lương, đầu tư, chuyển nhượng) để đăng ký.'
                             }},
                             { type: 'system', text: '1.3 Hướng dẫn chuẩn bị thông tin, tài liệu đăng ký/giải trình (nếu có)', badge: 'Hệ thống' },
-                            { type: 'system', text: '1.4 Hỗ trợ kê khai thông tin thông qua hỏi đáp tự động hoặc hỗ trợ auto check ngưỡng vốn điều lệ/vốn đầu tư/doanh thu dự kiến...', badge: 'Hệ thống' },
-                            { type: 'system', text: '1.5 Kiểm tra, cảnh báo rủi ro về chủ thể, địa chỉ đăng ký (lịch sử pháp lý của người đại diện pháp luật, dấu hiệu đăng ký hàng loạt, thay đổi tên liên tục...)', badge: 'Hệ thống' },
-                            { type: 'system', text: '1.6 Tạo hồ sơ và nộp hồ sơ qua Cổng tích hợp của ĐKKD, hệ thống tự động gửi thông tin đến CQT', badge: 'Hệ thống' },
+                            { type: 'system', text: '1.4 Hỗ trợ kê khai thông tin thông qua hỏi đáp tự động', badge: 'Hệ thống' },
+                            { type: 'system', text: '1.5 Kiểm tra, cảnh báo rủi ro về chủ thể, địa chỉ đăng ký (lịch sử pháp lý của người đại diện pháp luật, dấu hiệu đăng ký hàng loạt, thay đổi tên liên tục...)', badge: 'Hệ thống',objectSpecific: {
+                                'small-business':'1.5 Kiểm tra, cảnh báo rủi ro về chủ thể, địa chỉ đăng ký (lịch sử pháp lý của người đại diện pháp luật, dấu hiệu đăng ký hàng loạt, thay đổi tên liên tục...)',
+                                'non-profit':'1.5. Không thực hiện kiểm tra rủi ro về chủ thể',                                
+                                'individual-business': '1.5. Kiểm tra, cảnh báo rủi ro về chủ thể, địa chỉ đăng ký',
+                                'individual-income':'1.5. Không thực hiện kiểm tra về chủ thể'
+                            }},
+                            { type: 'system', text: '1.6 Tạo hồ sơ và nộp hồ sơ qua Cổng tích hợp của ĐKKD, hệ thống tự động gửi thông tin đến CQT', badge: 'Hệ thống', objectSpecific: {
+                                'small-business':'1.6 Tạo hồ sơ và nộp hồ sơ qua Cổng tích hợp của ĐKKD, hệ thống tự động gửi thông tin đến CQT',
+                                'non-profit':'1.6. Tạo hồ sơ và nộp qua Cổng DVCQG',                                
+                                'individual-business': '1.6 Tạo hồ sơ và nộp hồ sơ qua Cổng tích hợp của ĐKKD, hệ thống tự động gửi thông tin đến CQT',
+                                'individual-income':'1.6. Tạo hồ sơ và nộp qua Cổng DVCQG (nếu trực tiếp ĐKT), Hệ thống thuế tự động tạo HS nếu Tổ chức chi trả, khấu trừ thu nhập kê khai'
+                            }},
                             { type: 'system', text: '1.7 Hệ thống tự động sinh số tiếp nhận, phản hồi đăng ký theo email/SMS đã đăng ký của DN', badge: 'Hệ thống' },
-                            { type: 'system', text: '1.8 Hệ thống gợi ý phân loại chuyển CQT quản lý theo địa bàn quản lý, loại hình doanh nghiệp quản lý', badge: 'Hệ thống' }
+                            { type: 'system', text: '1.8 Hệ thống gợi ý phân loại chuyển CQT quản lý theo địa bàn quản lý, phân loại NNT', badge: 'Hệ thống' }
                         ],
-                        dataSources: [
-                            { text: 'Dữ liệu từ Cổng đăng ký doanh nghiệp quốc gia', badge: 'API' },
-                            { text: 'Cơ sở dữ liệu quốc gia về dân cư', badge: 'API' },
-                            { text: 'Lịch sử đăng ký thuế của người đại diện', badge: 'CSDL nội bộ' },
-                            { text: 'Danh mục ngành nghề kinh tế', badge: 'CSDL Bộ/ngành' },
-                            { text: 'Thông tin địa bàn quản lý thuế', badge: 'CSDL nội bộ' }
-                        ],
+                        dataSources: {
+                            'small-business': [
+                                { text: 'Cổng đăng ký doanh nghiệp quốc gia (DNVVN)', badge: 'API' },
+                                { text: 'CSDL ngành nghề – quy mô DN (SME)', badge: 'CSDL Bộ/ngành' },
+                                { text: 'Thông tin địa bàn quản lý thuế', badge: 'CSDL nội bộ' }
+                            ],
+                            'non-profit': [
+                                { text: 'CSDL đăng ký tổ chức phi lợi nhuận / hành chính', badge: 'API' },
+                                { text: 'Quyết định thành lập / Điều lệ hoạt động', badge: 'CSDL Hồ sơ NNT' },
+                                { text: 'Danh mục lĩnh vực hoạt động phi lợi nhuận/hành chính', badge: 'CSDL Bộ/ngành' }
+                            ],
+                            'individual-business': [
+                                { text: 'VNeID / eTax xác thực cá nhân kinh doanh', badge: 'API' },
+                                { text: 'Đăng ký hộ kinh doanh qua Cổng DVC', badge: 'API' },
+                                { text: 'Danh mục ngành nghề HKD', badge: 'CSDL Bộ/ngành' }
+                            ],
+                            'individual-income': [
+                                { text: 'VNeID / eTax xác thực cá nhân', badge: 'API' },
+                                { text: 'Thông tin đơn vị chi trả, khấu trừ thu nhập', badge: 'CSDL nội bộ' },
+                                { text: 'Danh mục nguồn thu nhập chịu thuế', badge: 'CSDL nội bộ' }
+                            ]
+                            },
                         objectInfo: {
                             'small-business': {
                                 title: 'Thông tin đặc thù cho Doanh nghiệp vừa và nhỏ khi Tiếp nhận hồ sơ Đăng ký thuế',
@@ -5125,19 +5150,32 @@
                     processContentDiv.appendChild(processItemDiv);
                 });
 
-                // Render data sources if available
-                if (subProcess.dataSources && subProcess.dataSources.length > 0) {
-                    const dataSourcesDiv = document.createElement('div');
-                    dataSourcesDiv.classList.add('data-sources');
-                    dataSourcesDiv.innerHTML = '<h5>Nguồn thông tin, dữ liệu:</h5>';
-                    subProcess.dataSources.forEach(source => {
-                        const sourceItem = document.createElement('div');
-                        sourceItem.classList.add('data-source-item');
-                        sourceItem.innerHTML = `${source.text} <span class="data-source-badge">${source.badge}</span>`;
-                        dataSourcesDiv.appendChild(sourceItem);
-                    });
-                    processContentDiv.appendChild(dataSourcesDiv);
-                }
+                // Render data sources (per-object or common)
+				let sourcesToRender = [];
+				if (subProcess.dataSources) {
+				  if (Array.isArray(subProcess.dataSources)) {
+				    // Common sources for all objects
+				    sourcesToRender = subProcess.dataSources;
+				  } else if (typeof subProcess.dataSources === 'object') {
+				    // Object-specific sources
+				    sourcesToRender = subProcess.dataSources[activeSubTabId] || [];
+				  }
+				}
+				
+				if (sourcesToRender.length > 0) {
+				  const dataSourcesDiv = document.createElement('div');
+				  dataSourcesDiv.classList.add('data-sources');
+				  dataSourcesDiv.innerHTML = '<h5>Nguồn thông tin, dữ liệu:</h5>';
+				
+				  sourcesToRender.forEach(source => {
+				    const sourceItem = document.createElement('div');
+				    sourceItem.classList.add('data-source-item');
+				    sourceItem.innerHTML = `${source.text} <span class="data-source-badge">${source.badge}</span>`;
+				    dataSourcesDiv.appendChild(sourceItem);
+				  });
+				
+				  processContentDiv.appendChild(dataSourcesDiv);
+				}
 
                 processContainerDiv.appendChild(processContentDiv);
                 selectedProcessesContainer.appendChild(processContainerDiv);

@@ -5153,7 +5153,7 @@
 					{ title: 'ĐKT', description: 'Qua CQ ĐKKD' },
                     { title: 'Ưu đãi thuế', description: 'Được áp dụng các chính sách ưu đãi thuế TNDN, GTGT theo quy định' },
                     { title: 'Kê khai thuế', description: 'Áp dụng phương pháp kê khai thuế GTGT theo phương pháp trực tiếp hoặc khấu trừ tùy quy mô' },
-                    { title: 'Hóa đơn điện tử', description: 'Bắt buộc sử dụng hóa đơn điện tử từ ngày 01/07/2022 theo quy định' },
+                    { title: 'Hóa đơn điện tử', description: 'Bắt buộc sử dụng hóa đơn điện tử, sử dụng hoá đơn có mã của cơ quan thuế từ ngày 01/07/2022 theo quy định' },
                     { title: 'Hỗ trợ từ cơ quan thuế', description: 'Được ưu tiên hỗ trợ về thủ tục thuế, tập huấn nghiệp vụ' }
                 ]
             },
@@ -5161,9 +5161,10 @@
                 title: 'Thông tin đặc thù cho Tổ chức phi lợi nhuận, tổ chức hành chính',
                 description: 'Nhóm đối tượng này có đặc điểm hoạt động không vì mục đích lợi nhuận và chịu sự quản lý của cơ quan nhà nước.',
                 features: [
+					{ title: 'ĐKT', description: 'Trực tiếp với CQT' }
                     { title: 'Miễn thuế', description: 'Được miễn thuế TNDN đối với các khoản thu nhập không vì mục đích lợi nhuận' },
                     { title: 'Khai thuế', description: 'Khai thuế GTGT theo phương pháp trực tiếp đối với hoạt động kinh doanh (nếu có)' },
-                    { title: 'Quản lý tài chính', description: 'Phải lập và nộp báo cáo tài chính theo quy định' },
+                    { title: 'BCTC', description: 'Phải lập và nộp báo cáo tài chính theo quy định' },
                     { title: 'Hóa đơn', description: 'Sử dụng hóa đơn điện tử theo quy định chung' }
                 ]
             },
@@ -5171,16 +5172,18 @@
                 title: 'Thông tin đặc thù cho Cá nhân kinh doanh',
                 description: 'Nhóm đối tượng này bao gồm hộ kinh doanh cá thể và cá nhân kinh doanh độc lập.',
                 features: [
-                    { title: 'Thuế khoán', description: 'Áp dụng phương pháp sử dụng HĐĐT, kê khai theo ngưỡng doanh thu chịu thuế đối với hộ kinh doanh nhỏ' },
+					{ title: 'ĐKT', description: 'Qua CQ ĐKKD, thủ tục đăng ký thuế đơn giản, có thể thực hiện trực tuyến' }
+                    { title: 'Nộp thuế theo ngưỡng DT', description: 'Áp dụng phương pháp sử dụng HĐĐT, kê khai theo ngưỡng doanh thu chịu thuế đối với hộ kinh doanh nhỏ' },
                     { title: 'Khai thuế', description: 'Khai thuế GTGT, TNCN theo quy định' },
-                    { title: 'Hóa đơn', description: 'Sử dụng hóa đơn điện tử hoặc hóa đơn bán lẻ' },
-                    { title: 'Đăng ký thuế', description: 'Thủ tục đăng ký thuế đơn giản, có thể thực hiện trực tuyến' }
+                    { title: 'Hóa đơn', description: 'Sử dụng hóa đơn điện tử có mã của cơ quan thuế hoá đơn, hoá đơn từ máy tính tiền theo lần phát sinh' }
+                    
                 ]
             },
             'individual-income': {
                 title: 'Thông tin đặc thù cho Cá nhân có thu nhập từ tiền lương và khác',
                 description: 'Nhóm đối tượng này bao gồm người lao động có thu nhập từ tiền lương và các khoản thu nhập khác.',
                 features: [
+					{ title: 'ĐKT', description: 'Trực tiếp hoặc qua tổ chức chi trả, khấu trừ thu nhập' },
                     { title: 'Khai thuế TNCN', description: 'Áp dụng biểu thuế lũy tiến từng phần hoặc thuế suất toàn phần' },
                     { title: 'Quyết toán thuế', description: 'Được quyết toán thuế hàng năm nếu có số thuế nộp thừa' },
                     { title: 'Giảm trừ gia cảnh', description: 'Được áp dụng các khoản giảm trừ gia cảnh theo quy định' },
